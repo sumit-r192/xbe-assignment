@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+development:
+  :concurrency: 10
+
+production:
+  :concurrency: 10
+
+:max_retries: 1
+
+:queues:
+  - default

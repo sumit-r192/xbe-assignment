@@ -75,3 +75,5 @@ end
 
 gem 'pry-rails', group: :development
 gem 'rubocop', require: false
+gem 'sidekiq', '~> 6.5.5'
+gem 'sidekiq-client-cli', '~> 0.1.7'
