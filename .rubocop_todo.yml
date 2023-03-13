@@ -28,6 +28,7 @@ Style/Documentation:
     - 'spec/**/*'
     - 'test/**/*'
     - 'app/helpers/application_helper.rb'
+    - 'app/jobs/verify_transaction_job.rb'
     - 'app/mailers/application_mailer.rb'
     - 'app/models/application_record.rb'
     - 'app/models/concerns/track_transaction.rb'

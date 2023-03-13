@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Include this concern file into all the required models where we need to track any changes in DB records.
+
 module TrackTransaction
   extend ActiveSupport::Concern
 
@@ -8,6 +10,7 @@ module TrackTransaction
   end
 
   def check_batch
-    # Do the needfull check here in background
+    # Call background job to perform the required verification and updateds.
+    VerifyTransactionJob.perform_later(self.class.name, id)
   end
 end
