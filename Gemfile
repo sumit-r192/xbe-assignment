@@ -66,6 +66,13 @@ group :development do
   # gem "spring"
 end
 
+group :development, :test do
+  gem "pry-rails"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+end
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
@@ -73,7 +80,6 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'pry-rails', group: :development
 gem 'rubocop', require: false
 gem 'sidekiq', '~> 6.5.5'
 gem 'sidekiq-client-cli', '~> 0.1.7'
