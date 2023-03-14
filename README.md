@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# XBE Assignment
 
-Things you may want to cover:
+We'd like to ensure that server application code runs any time that certain data in the database changes (even if the change was directly made to the database).
 
-* Ruby version
+## Installation
 
-* System dependencies
+This application uses the following Ruby and Rails version. 
 
-* Configuration
+Ruby version 
 
-* Database creation
+    ruby '3.1.1'
 
-* Database initialization
+Rails version
 
-* How to run the test suite
+    rails '7.0.4'
 
-* Services (job queues, cache servers, search engines, etc.)
+Follow these easy steps to install and start the app:
 
-* Deployment instructions
+First, install the gems required by the application:
 
-* ...
+    bundle
+
+Next, execute the database migrations/schema setup:
+
+    bundle exec rake db:setup
+
+Start the sidekiq server for background jobs:
+
+    bundle exec sidekiq
+
+### Start the app
+
+Start the Rails server:
+
+    bundle exec rails server OR rails s
+
+We don't have any landing/dashboard page, so we will get the default Rails page.
+
+
+We can check the sidekiq logs at
+
+    http://localhost:3000/sidekiq
+
+To check the RSpec test cases, run the follroing command in terminal.
+
+    rspec spec
