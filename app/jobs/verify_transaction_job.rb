@@ -9,6 +9,6 @@ class VerifyTransactionJob < ApplicationJob
     @object = class_name.constantize.find_by(id: class_id)
     return if @object.blank?
 
-    ObjectTransaction.call(@object)
+    ObjectTransaction.call(@object) # To keep all logic inside the services
   end
 end

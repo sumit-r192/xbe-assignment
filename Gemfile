@@ -67,10 +67,10 @@ group :development do
 end
 
 group :development, :test do
-  gem "pry-rails"
-  gem "rspec-rails"
-  gem "factory_bot_rails"
-  gem "faker"
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :test do
